@@ -1,18 +1,11 @@
 let mongoose = require("mongoose");
 
 let notesSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    require: true,
-  },
-  msg: {
-    type: String,
-    require: true,
-  },
-  created_at: {
-    type: Date,
-  },
+  name: String,
+  time: Date,
+  userEmail: String,
 });
 
-let Note = mongoose.model("Note", notesSchema);
-module.exports = Note;
+let Notes = mongoose.model("Notes", notesSchema);
+
+module.exports = Notes;
