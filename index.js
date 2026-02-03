@@ -74,6 +74,8 @@ app.post("/user/login", async (req, res) => {
     });
     res.cookie("token", token, {
       path: "/",
+      sameSite: "none",
+      httpOnly: true,
     });
     res.status(200).json({ message: "password match" });
   } catch (error) {
