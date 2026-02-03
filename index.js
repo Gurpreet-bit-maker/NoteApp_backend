@@ -76,6 +76,7 @@ app.post("/user/login", async (req, res) => {
       path: "/",
       sameSite: "none",
       httpOnly: true,
+      secure: true,
     });
     res.status(200).json({ message: "password match" });
   } catch (error) {
